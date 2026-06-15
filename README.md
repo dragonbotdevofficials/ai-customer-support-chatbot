@@ -54,3 +54,25 @@ This project is designed to support AI-powered customer interactions using Googl
 ```text
 GEMINI_API_KEY=your_api_key_here
 ```
+
+## Run Locally
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start the API server:
+
+```bash
+uvicorn app:app --reload
+```
+
+Open your browser:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+FastAPI will automatically generate interactive API documentation where you can test the chatbot endpoint.
