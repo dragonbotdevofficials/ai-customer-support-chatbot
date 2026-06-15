@@ -30,3 +30,19 @@ python main.py
 - Database-backed order lookup
 - Multi-language support
 - Web interface
+
+- ## Sample Conversation
+
+```text
+You: Where is my order?
+Bot: Please provide your order ID.
+
+You: I want to return my product.
+Bot: Returns are accepted within 30 days of delivery.
+
+You: Recommend a camping tent.
+Bot: I recommend our lightweight waterproof camping tent.
+
+You: I need a human agent.
+Bot: Please share your email and our support team will contact you.
+```
