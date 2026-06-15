@@ -1,37 +1,36 @@
-def chatbot():
-    print("🤖 AI Customer Support Chatbot")
-    print("Type 'exit' to quit.\n")
+from faq import FAQ_RESPONSES
+from product_data import PRODUCTS
 
-    while True:
-        user_input = input("You: ").lower()
+print("🤖 AI Customer Support Chatbot")
+print("Type 'exit' to quit.\n")
 
-        if user_input == "exit":
-            print("Bot: Thank you for visiting. Have a great day!")
-            break
+while True:
+    user = input("You: ").lower()
 
-        elif "order" in user_input:
-            print("Bot: Please provide your order ID. (Demo: ORDER123)")
+    if user == "exit":
+        print("Bot: Thanks for visiting!")
+        break
 
-        elif "return" in user_input or "refund" in user_input:
-            print("Bot: Returns are accepted within 30 days of delivery.")
+    elif "return" in user:
+        print("Bot:", FAQ_RESPONSES["return"])
 
-        elif "recommend" in user_input or "product" in user_input:
-            print(
-                "Bot: I recommend our lightweight waterproof camping tent for outdoor trips."
-            )
+    elif "refund" in user:
+        print("Bot:", FAQ_RESPONSES["refund"])
 
-        elif "human" in user_input or "agent" in user_input:
-            print(
-                "Bot: A support representative will contact you shortly. "
-                "Please share your email."
-            )
+    elif "shipping" in user:
+        print("Bot:", FAQ_RESPONSES["shipping"])
 
-        else:
-            print(
-                "Bot: I can help with orders, returns, product recommendations, "
-                "and customer support."
-            )
+    elif "tent" in user:
+        print("Bot:", PRODUCTS["tent"])
 
+    elif "backpack" in user:
+        print("Bot:", PRODUCTS["backpack"])
 
-if __name__ == "__main__":
-    chatbot()
+    elif "sleeping" in user:
+        print("Bot:", PRODUCTS["sleeping bag"])
+
+    elif "human" in user or "agent" in user:
+        print("Bot: A human support representative will contact you shortly.")
+
+    else:
+        print("Bot: I can help with returns, refunds, shipping, products, and customer support.")
