@@ -76,3 +76,22 @@ http://127.0.0.1:8000/docs
 ```
 
 FastAPI will automatically generate interactive API documentation where you can test the chatbot endpoint.
+
+## Example API Request
+
+POST `/chat`
+
+```json
+{
+  "message": "Where is my order ORDER123?"
+}
+```
+
+Example Response:
+
+```json
+{
+  "user_message": "Where is my order ORDER123?",
+  "bot_reply": "Your order ORDER123 is currently in transit and is expected to arrive in 2 days."
+}
+```
