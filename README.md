@@ -46,3 +46,11 @@ Bot: I recommend our lightweight waterproof camping tent.
 You: I need a human agent.
 Bot: Please share your email and our support team will contact you.
 ```
+
+## AI Integration
+
+This project is designed to support AI-powered customer interactions using Google Gemini. Configure your own API key in a local `.env` file before running AI features.
+
+```text
+GEMINI_API_KEY=your_api_key_here
+```
